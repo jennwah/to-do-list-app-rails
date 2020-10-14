@@ -61,6 +61,10 @@ class ListsController < ApplicationController
     end
   end
 
+  def active
+    @lists = List.where(completed: "false")
+  end
+
 
 
   private
